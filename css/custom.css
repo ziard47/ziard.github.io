@@ -1,0 +1,18 @@
+/* My customized Boostrap parts or designs */
+
+body {
+    background-color: #add8e6;
+  }
+
+  /*overriding the settings or formats*/
+  .btn{​​​​​​
+    border-radius: 0;
+    background-color: #aa00e6;
+    border-color:#aa00e6;
+    min-width: 150px;
+  }​​​​​​
+
+  .btn:hover{​​​​​​
+    background-color: #6e0793;
+    border-color:#6e0793;
+  }​​​​​​
