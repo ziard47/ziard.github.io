@@ -278,6 +278,9 @@ p, label{
 
 }
 
+.red-star {
+    color: red;
+}
 
 @-webkit-keyframes fade {
   from {opacity: .4}

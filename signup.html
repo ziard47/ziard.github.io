@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Contact Us</title>
+    <title>Sign up</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
@@ -104,27 +104,40 @@
           </div>
           <div class="container col-lg-4 col-md-4">
 
-            <form action="action_page.php" class="formBox">
+            <form action="#" class="formBox">
 
-              <label for="fname">First Name</label>
+              <label for="fname">First Name <span class="red-star">*</span></label>
               <input type="text" id="fname" name="fname" placeholder="First Name">
 
-              <label for="lname">Last Name</label>
+              <label for="lname">Last Name <span class="red-star">*</span></label>
               <input type="text" id="lname" name="lname" placeholder="Last Name">
 
-              <label for="email">E-Mail</label>
+              <label for="email">E-Mail <span class="red-star">*</span></label>
               <input type="text" id="email" name="email" placeholder="E-Mail">
 
-              <label for="password">Last Name</label>
-              <input type="password" id="password" name="password" placeholder="Password">
+              <label for="password">Password <span class="red-star">*</span></label>
+              <input type="password" id="txtPassword" name="password" placeholder="Password">
 
-              <label for="Cpassword">Last Name</label>
-              <input type="password" id="cpassword" name="cpassword" placeholder="Confirm Password">
+              <label for="Cpassword">Confirm Password <span class="red-star">*</span></label>
+              <input type="password" id="txtConfirmPassword" name="cpassword" placeholder="Confirm Password">
               <div class="container" style="margin-top:10px;">
               </div>
-              <input type="submit" value="Signup">
+              <input type="submit" id="btnSubmit" value="Signup">
 
-
+              <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+              <script type="text/javascript">
+                  $(function () {
+                      $("#btnSubmit").click(function () {
+                          var password = $("#txtPassword").val();
+                          var confirmPassword = $("#txtConfirmPassword").val();
+                          if (password != confirmPassword) {
+                              alert("Passwords do not match.");
+                              return false;
+                          }
+                          return true;
+                      });
+                  });
+              </script>
             </form>
           </div>
         </div>
